@@ -1,0 +1,78 @@
+:root {
+    --primary: #4338ca;
+    --primary-dark: #312e81;
+    --primary-light: #6366f1;
+    --accent: #f59e0b;
+    --hijau: #16a34a;
+    --merah: #dc2626;
+    --abu: #f8fafc;
+    --teks: #1e293b;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI',Tahoma,sans-serif; color:var(--teks); background:var(--abu); }
+
+/* SIDEBAR */
+.sidebar { width:260px; min-height:100vh; background:linear-gradient(180deg,var(--primary-dark),var(--primary)); position:fixed; left:0; top:0; z-index:100; }
+.sidebar-brand { padding:1.5rem; border-bottom:1px solid rgba(255,255,255,.15); }
+.sidebar-brand h4 { color:#fff; font-weight:700; margin:0; font-size:1.1rem; }
+.sidebar-brand p { color:rgba(255,255,255,.6); font-size:.75rem; margin:0; }
+.sidebar .nav-link { color:rgba(255,255,255,.85); padding:.75rem 1.25rem; border-radius:8px; margin:.2rem .75rem; transition:.2s; display:flex; align-items:center; gap:.75rem; font-weight:500; font-size:.92rem; }
+.sidebar .nav-link:hover, .sidebar .nav-link.active { background:rgba(255,255,255,.15); color:#fff; }
+.sidebar .nav-link i { width:18px; text-align:center; }
+.content { margin-left:260px; min-height:100vh; }
+.topbar { background:#fff; padding:1rem 1.5rem; border-bottom:1px solid #e2e8f0; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:99; }
+.main { padding:2rem 1.5rem; }
+
+/* STATUS BADGE ML */
+.ml-status { display:inline-flex; align-items:center; gap:.4rem; padding:.4rem .9rem; border-radius:20px; font-size:.82rem; font-weight:600; }
+.ml-status.online { background:#dcfce7; color:#15803d; }
+.ml-status.offline { background:#fee2e2; color:#b91c1c; }
+.ml-status .dot { width:8px; height:8px; border-radius:50%; background:currentColor; }
+
+/* CARDS */
+.stat-card { border:none; border-radius:14px; padding:1.5rem; color:#fff; }
+.stat-card .stat-val { font-size:1.9rem; font-weight:800; }
+.stat-card .stat-lbl { font-size:.85rem; opacity:.9; }
+.stat-card .stat-icon { font-size:2.2rem; opacity:.7; }
+
+.card-kampung { border:none; border-radius:14px; box-shadow:0 2px 12px rgba(0,0,0,.06); }
+.card-kampung .card-header { background:var(--primary); color:#fff; border-radius:14px 14px 0 0!important; font-weight:600; }
+
+/* TABLE */
+.table-ml thead th { background:var(--primary); color:#fff; font-weight:600; border:none; font-size:.85rem; }
+.table-ml tbody tr:hover { background:#f0f0ff; }
+
+/* BUTTONS */
+.btn-primary-ml { background:var(--primary); color:#fff; border:none; }
+.btn-primary-ml:hover { background:var(--primary-dark); color:#fff; }
+.btn-accent { background:var(--accent); color:#fff; border:none; }
+.btn-accent:hover { background:#d97706; color:#fff; }
+
+/* FORM */
+.form-control:focus, .form-select:focus { border-color:var(--primary); box-shadow:0 0 0 .25rem rgba(67,56,202,.15); }
+.form-label { font-weight:600; color:var(--primary-dark); font-size:.9rem; }
+
+/* PREDICTION RESULT */
+.hasil-prediksi-box { background:linear-gradient(135deg,var(--primary),var(--primary-light)); border-radius:16px; padding:2rem; color:#fff; }
+.hasil-prediksi-box .harga-utama { font-size:2.8rem; font-weight:800; }
+.confidence-range { background:rgba(255,255,255,.15); border-radius:10px; padding:.75rem 1rem; display:inline-block; margin-top:.5rem; }
+
+/* LOGIN */
+.login-wrapper { min-height:100vh; background:linear-gradient(135deg,var(--primary-dark),var(--primary),var(--primary-light)); display:flex; align-items:center; justify-content:center; }
+.login-card { background:#fff; border-radius:20px; padding:2.5rem; max-width:420px; width:100%; box-shadow:0 20px 60px rgba(0,0,0,.2); }
+.login-logo { font-size:3rem; text-align:center; margin-bottom:.5rem; }
+
+/* BADGE MUSIM */
+.badge-musim-panen { background:#dcfce7; color:#15803d; }
+.badge-musim-normal { background:#fef3c7; color:#92400e; }
+
+/* ALERT */
+.alert-success { background:#e8f5e9; border-color:#a5d6a7; color:#1b5e20; }
+.alert-danger { background:#ffebee; border-color:#ef9a9a; color:#b71c1c; }
+.alert-warning { background:#fff8e1; border-color:#ffe082; color:#7a4a00; }
+
+@media(max-width:768px){
+    .sidebar { transform:translateX(-100%); transition:.3s; }
+    .sidebar.show { transform:translateX(0); }
+    .content { margin-left:0; }
+}

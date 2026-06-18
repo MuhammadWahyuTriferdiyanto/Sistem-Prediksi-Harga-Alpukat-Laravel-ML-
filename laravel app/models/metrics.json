@@ -1,0 +1,22 @@
+{
+  "mae": 2120.36,
+  "mape_percent": 6.05,
+  "r2_score": 0.9223,
+  "n_train": 1132,
+  "n_test": 283,
+  "features": [
+    "jenis_alpukat_encoded",
+    "bulan",
+    "tahun",
+    "curah_hujan_mm",
+    "pasokan_kg",
+    "musim_panen"
+  ],
+  "jenis_alpukat_classes": [
+    "Aligator",
+    "Kendil",
+    "Mentega",
+    "Miki",
+    "Wina"
+  ]
+}
